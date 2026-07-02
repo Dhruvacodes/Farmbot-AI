@@ -1,0 +1,6 @@
+target,unit,train_mae,test_mae,test_rmse,train_r2,test_r2,test_mean,test_min,test_max,model_path
+delta_N,mg/kg,2.961321,3.25144,6.401856,0.554573,0.443554,1.252438,-19.969297,29.990339,model/delta_N_model.txt
+delta_P,mg/kg,1.430933,1.591293,3.171422,0.565699,0.454217,0.448245,-9.994051,14.98755,model/delta_P_model.txt
+delta_K,mg/kg,3.070621,3.412629,6.476091,0.553145,0.428371,1.00489,-19.983728,29.99514,model/delta_K_model.txt
+irrigation_ml,mL,1.509511,1.63541,3.742558,0.998128,0.998023,45.352394,0.0,299.995361,model/irrigation_ml_model.txt
+pH_adj,pH adjustment,0.04386,0.048037,0.085614,0.36989,0.212386,-0.003354,-0.299885,0.299959,model/pH_adj_model.txt

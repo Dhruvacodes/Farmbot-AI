@@ -1,0 +1,55 @@
+================================================================================
+ONNX MODELS - QUICK START GUIDE
+================================================================================
+
+All Models Successfully Exported! (3/4 Complete)
+
+READY TO USE:
+✓ Detection Model (12.0 MB)          FRUIT_PINEAPPLE/models/detection_model.onnx
+✓ Weight Prediction (300 B)           FRUIT_PINEAPPLE/models/weight_prediction.onnx
+✓ NPK Fertigation (3.2 MB total)      NPK Pineapple/model/pineapple_model_*.onnx
+  - delta_N.onnx (657 KB)
+  - delta_P.onnx (663 KB)
+  - delta_K.onnx (664 KB)
+  - irrigation_ml.onnx (643 KB)
+  - pH_adj.onnx (660 KB)
+
+================================================================================
+MODELS NOT YET AVAILABLE:
+================================================================================
+⚠ Ripeness Classification - Requires download from Google Drive
+  → Model location: /content/drive/MyDrive/train2/weights/best.pt (from Colab)
+  → Export with: python FRUIT_PINEAPPLE/export_classification_onnx.py
+
+================================================================================
+HOW TO USE WITH JETSON:
+================================================================================
+
+1. Copy ONNX files to Jetson device
+2. Install ONNX Runtime:
+   pip install onnxruntime
+
+3. Python inference example:
+   
+   import onnxruntime as rt
+   import numpy as np
+   
+   # Load a model
+   session = rt.InferenceSession("detection_model.onnx")
+   
+   # Get input/output names
+   input_name = session.get_inputs()[0].name
+   output_names = [o.name for o in session.get_outputs()]
+   
+   # Prepare input (example)
+   inputs = np.random.randn(1, 3, 640, 640).astype(np.float32)
+   
+   # Run inference
+   results = session.run(output_names, {input_name: inputs})
+
+================================================================================
+TOTAL DEPLOYMENT SIZE: ~15.2 MB (3.2 MB + 12 MB + others)
+================================================================================
+
+For detailed information, see: ONNX_MODELS_SUMMARY.md
+For re-export scripts, see: FRUIT_PINEAPPLE/export_*.py and NPK Pineapple/export_npk_onnx.py

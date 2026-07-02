@@ -1,0 +1,21 @@
+#!/bin/bash
+# JETSON STARTUP GUIDE - Run these in order on Jetson
+
+echo "=============================================="
+echo "FARMBOT AI - Jetson Startup Commands"
+echo "=============================================="
+echo ""
+echo "Step 1: Test all models (one-time)"
+echo "  chmod +x ~/running_frc_models/1_test_models.sh"
+echo "  ~/running_frc_models/1_test_models.sh"
+echo ""
+echo "Step 2: Start camera server (Terminal 1)"
+echo "  chmod +x ~/running_frc_models/2_start_camera_server.sh"
+echo "  ~/running_frc_models/2_start_camera_server.sh"
+echo ""
+echo "Step 3: Start inference pipeline (Terminal 2)"
+echo "  chmod +x ~/running_frc_models/3_start_inference.sh"
+echo "  ~/running_frc_models/3_start_inference.sh"
+echo ""
+echo "Then view dashboard at: http://10.137.170.216:8001"
+echo "=============================================="

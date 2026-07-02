@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-04-28T15:27:33",
+  "dataset": {
+    "total_rows": 60000,
+    "train_rows": 48000,
+    "test_rows": 12000,
+    "split": "time_ordered_80_20",
+    "features": 20,
+    "targets": [
+      "delta_N",
+      "delta_P",
+      "delta_K",
+      "irrigation_ml",
+      "pH_adj"
+    ]
+  },
+  "interpretation": {
+    "mae": "Mean absolute prediction error in the same unit as the target. Lower is better.",
+    "rmse": "Root mean squared error, which penalizes larger mistakes. Lower is better.",
+    "r2": "Explained variance score. 1.0 is perfect; values near 0 mean weak predictive value."
+  },
+  "metrics": [
+    {
+      "target": "delta_N",
+      "unit": "mg/kg",
+      "train_mae": 2.961321,
+      "test_mae": 3.25144,
+      "test_rmse": 6.401856,
+      "train_r2": 0.554573,
+      "test_r2": 0.443554,
+      "test_mean": 1.252438,
+      "test_min": -19.969297,
+      "test_max": 29.990339,
+      "model_path": "model/delta_N_model.txt"
+    },
+    {
+      "target": "delta_P",
+      "unit": "mg/kg",
+      "train_mae": 1.430933,
+      "test_mae": 1.591293,
+      "test_rmse": 3.171422,
+      "train_r2": 0.565699,
+      "test_r2": 0.454217,
+      "test_mean": 0.448245,
+      "test_min": -9.994051,
+      "test_max": 14.98755,
+      "model_path": "model/delta_P_model.txt"
+    },
+    {
+      "target": "delta_K",
+      "unit": "mg/kg",
+      "train_mae": 3.070621,
+      "test_mae": 3.412629,
+      "test_rmse": 6.476091,
+      "train_r2": 0.553145,
+      "test_r2": 0.428371,
+      "test_mean": 1.00489,
+      "test_min": -19.983728,
+      "test_max": 29.99514,
+      "model_path": "model/delta_K_model.txt"
+    },
+    {
+      "target": "irrigation_ml",
+      "unit": "mL",
+      "train_mae": 1.509511,
+      "test_mae": 1.63541,
+      "test_rmse": 3.742558,
+      "train_r2": 0.998128,
+      "test_r2": 0.998023,
+      "test_mean": 45.352394,
+      "test_min": 0.0,
+      "test_max": 299.995361,
+      "model_path": "model/irrigation_ml_model.txt"
+    },
+    {
+      "target": "pH_adj",
+      "unit": "pH adjustment",
+      "train_mae": 0.04386,
+      "test_mae": 0.048037,
+      "test_rmse": 0.085614,
+      "train_r2": 0.36989,
+      "test_r2": 0.212386,
+      "test_mean": -0.003354,
+      "test_min": -0.299885,
+      "test_max": 0.299959,
+      "model_path": "model/pH_adj_model.txt"
+    }
+  ]
+}
