@@ -136,30 +136,6 @@ python export_classification_onnx.py
 
 Ripeness classification ONNX is not present locally. The export script expects the trained YOLO classification checkpoint from the original Colab/Drive location or a local equivalent.
 
-## What Was Intentionally Left Out
-
-These were excluded so the repo stays uploadable and usable:
-
-- `.git/` history folders
-- `.venv/`, `__pycache__/`, `.ipynb_checkpoints/`
-- raw Roboflow/PlantVillage datasets
-- training output folders such as `runs/`
-- zip archives and duplicate extracted archives
-- large checkpoints such as `best.pt` over GitHub's 100 MB file limit
-- older root-level experiments that are not needed for the current FRC deployment path
-- the bad fruit evaluation dump that validated against an 86-class plant/leaf dataset instead of a pineapple-only dataset
-
-The corrected paper-ready figures are in `docs/research_paper_evaluation_images/`.
-
-## Current Status
-
-- Dashboard runs without hardware using simulated telemetry.
-- NPK/fertigation subsystem has source code, ONNX models, metrics, simulator, safety layer, and tests.
-- Fruit detection and weight prediction have deployable model artifacts.
-- Leaf disease detection ONNX is included and wired into dashboard helpers.
-- Jetson scripts are present with deployment model copies.
-- True ripeness classification still needs the missing trained checkpoint exported to ONNX.
-- Real sensor/actuator operation needs hardware calibration and field testing.
 
 ## License
 
